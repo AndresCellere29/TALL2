@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    body {
+        background-color: #4f7da8; /* Cambia el color a tu elección */
+    }
+  </style>
+  <link rel="stylesheet" href="/css/styles.css">
+    <title>contacto</title>
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("correo").value;
+            var edad = document.getElementById("edad").value;
+            var comentario = document.getElementById("comentario").value;
+
+            if (nombre === "" || correo === "" || edad === "" || comentario === "") {
+                alert("Por favor, completa todos los campos del formulario.");
+                return false;
+            }
+
+            alert("El mensaje se ha enviado. ¡Gracias, " + nombre + "!");
+        }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+        <li><a href="acerca de nosotros.html">ACERCA DE NOSOSTROS</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+    <h2>FORMULARIO DE CONTACTO</h2>
+    <form onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <footer>
+      <p style="color: rgb(9, 9, 26); font-size: 16px;">BUSCANOS EN NUSTRAS REDES SOCIALES.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <a href="https://www.facebook.com/"><img src="/assets/descargfacebok.png" alt="Facebook" width="10%"></a>
+          <a
+            href="https://www.google.com/search?q=instagran&rlz=1C1UUXU_esEC976EC976&oq=instagran&aqs=chrome..69i57j0i10i131i433i512l3j0i3j0i10i433i512j0i10i512j5.2928j0j7&sourceid=chrome&ie=UTF-8">
+            <img src="/assets/insta.jpg" alt="Instagram" width="10%"></a>
+        </div>
+
+        <div class="col-md-4">
+          2023 ELECTRO HERRAMIENTAS. <br>
+          Todos los derechos reservados <br>
+          Dirección: Calle principal SAN-JUAN CENTRO HISTOTICO, Ciudad: QUITO - ECUADOR <br>
+          Teléfono:098885678
+        </div>
+        <div class="col-md-4">
+         Luis Cellere <br>
+         Gerente <br>
+         Bryan Canelos <br>
+         Subgerente
+        </div>
+      </div>
+
+    </footer>
+</body>
+
+</html>
